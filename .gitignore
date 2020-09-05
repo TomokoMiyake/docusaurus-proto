@@ -1,6 +1,6 @@
 .DS_Store
 build/
-i18n/*
+# i18n/*
 node_modules
 package-lock.json
 yarn.lock
