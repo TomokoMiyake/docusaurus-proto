@@ -22,6 +22,18 @@
       [
         "remark-lint-heading-style",
         false
+      ],
+      [
+        "remark-lint-no-literal-urls",
+        false
+      ],
+      [
+        "remark-lint-maximum-heading-length",
+        false
+      ],
+      [
+        "remark-lint-maximum-line-length",
+        false
       ]
     ]
   },

@@ -55,7 +55,7 @@ class HomeSplash extends React.Component {
 
     const Button = props => (
       <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={props.href} target={props.target}>
+        <a className="button buttonTop" href={props.href} target={props.target}>
           {props.children}
         </a>
       </div>
@@ -126,7 +126,14 @@ class Index extends React.Component {
       <div
         className="descriptionSection"
         style={{textAlign: 'center'}}>
-        <span>※ サポートポリシーはこちらをご確認ください。</span>
+        <blockquote className="quoteTop">
+          <p>
+            <strong className="quoteTop_title">Support Policy</strong><br/><br/>
+            kintone UI Component は、テクニカルサポートを通じたお問い合わせに対応しています。<br/>
+            <a href="https://faq.cybozu.info/alphascope/cybozu/web/kintone/Detail.aspx?id=1763&isCrawler=1#02">サポートへのお問い合わせ方法</a>をご確認の上、お問い合わせください。<br/>
+            ソースコードの変更、再配布および商用利用等は、ライセンスに従って利用可能です。
+          </p>
+        </blockquote>
       </div>
     );
 

@@ -27,6 +27,9 @@
 a {
     color: #3498DB;
 }
+a:hover {
+    color: #3498dbca;
+}
 .docImage {
     margin: 3rem auto;
     max-width: 400px;
@@ -50,12 +53,27 @@ a {
 .container.paddingBottom {
     padding-bottom: 0px;
 }
-.button {
+.buttonTop {
     color: #ffffff;
     border-color: #ffffff;
+    border-width: 2px;
+    border-radius: 8px;
 }
-.button:hover {
+.buttonTop:hover {
+    color: #ffffff;
     background-color: #3498DB;
+}
+.quoteTop {
+    background-color: #2b3137;
+    border-left: 8px solid #3498DB;
+    border-radius: 8px;
+    padding: 15px 30px 15px 15px;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 20px;
+}
+.quoteTop_title {
+    font-size: 20px;
 }
 /* #usecase {
     color: #ffffff;

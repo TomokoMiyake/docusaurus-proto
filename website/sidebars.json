@@ -8,7 +8,6 @@
         "label": "Desktop",
         "ids": [
           "components/desktop/button",
-          "components/desktop/button-v0",
           "components/desktop/checkbox",
           "components/desktop/dialog",
           "components/desktop/dropdown",

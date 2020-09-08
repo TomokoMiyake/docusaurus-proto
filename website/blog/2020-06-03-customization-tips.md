@@ -1,8 +1,6 @@
 ---
 title: How to use built-in table column types
 author: Tomoko Miyake
-authorURL: https://twitter.com/tomo63ko
-authorFBID: 33
 ---
 
 This is the Customization Tips of the kintone UI Component.(≧▽≦)

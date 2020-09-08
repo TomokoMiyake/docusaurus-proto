@@ -8,7 +8,7 @@
 const RemarkablePlugins = require("./core/RemarkablePlugin");
 
 const siteConfig = {
-  title: "Be a smart kintone developer with kintone UI Component.", // Title for your website.
+  title: "Be a smart kintone developer with kintone UI Component.",
   tagline: "It will support your UI customization project.",
   // For GitHub Pages hosting
   // url: "https://tomokomiyake.github.io",
@@ -59,17 +59,12 @@ const siteConfig = {
   markdownPlugins: [RemarkablePlugins.KUCComponentRenderer],
   scripts: [
     "https://miyass.github.io/kuc-cdn/kuc.min.js",
-    // "https://unpkg.com/@kintone/kintone-ui-component@0.3.3/dist/kintone-ui-component.min.js",
     "/js/extra.js",
     "https://buttons.github.io/buttons.js",
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
     "/js/code-block-button.js",
   ],
-  stylesheets: [
-    // "https://unpkg.com/@kintone/kintone-ui-component@0.3.3/dist/kintone-ui-component.min.css",
-    "/css/custom.css",
-    "/css/code-block-button.css",
-  ],
+  stylesheets: ["/css/custom.css", "/css/code-block-button.css"],
   // gaTrackingId: "",
   // Option for Algolia DocSearch(It can be set at production-ready.)
   // algolia: {
