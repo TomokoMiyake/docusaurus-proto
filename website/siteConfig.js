@@ -45,7 +45,7 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Cybozu Inc.`,
   highlight: {
     theme: "atom-one-dark", // "Nord", "Dracula", "Monokai Sublime"
-    defaultLang: "javascript",
+    defaultLang: "javascript"
   },
   onPageNav: "separate",
   docsSideNavCollapsible: true,

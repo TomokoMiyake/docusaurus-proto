@@ -11,7 +11,7 @@ Dropdown は複数選択肢の中から一つの値を選択することがで�
 
 ```KUCComponentRenderer {"id":"dropdown_render"}
 var component = new Kuc.Dropdown({
-  value :  'Orange',
+  value : 'Orange',
   visible : true,
   items : [
     {

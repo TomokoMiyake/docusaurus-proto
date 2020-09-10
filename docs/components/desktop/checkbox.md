@@ -73,11 +73,11 @@ var checkbox = new kintoneUIComponent.Checkbox({
   label: 'Fruit',
   requiredIcon: true,
   items: [
-    { 
+    {
       label: 'orange',
       value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
       value: 'Apple'
     }
@@ -92,7 +92,7 @@ var checkbox = new kintoneUIComponent.Checkbox({
   borderVisible: true,
   onChange: function(event) {
     console.log(event);
-  } 
+  }
 });
 space.appendChild(checkbox);
 ```

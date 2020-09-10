@@ -10,7 +10,6 @@
         "label": "Desktop",
         "ids": [
           "version-0.1.0-components/desktop/button",
-          "version-0.1.0-components/desktop/button-v0",
           "version-0.1.0-components/desktop/checkbox",
           "version-0.1.0-components/desktop/dialog",
           "version-0.1.0-components/desktop/dropdown",

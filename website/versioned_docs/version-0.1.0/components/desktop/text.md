@@ -46,7 +46,7 @@ Text(options)
 ### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
+| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
 
 ---
 # Sample Code

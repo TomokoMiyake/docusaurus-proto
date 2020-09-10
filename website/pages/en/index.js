@@ -9,7 +9,7 @@ const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
 
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
+const MarkdownBlock = CompLibrary.MarkdownBlock;
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
@@ -85,7 +85,7 @@ class Index extends React.Component {
         id={props.id}
         background={props.background}>
         <h2 align="center">Use Cases</h2>
-        <div align="center">
+        <div className="usecase_sentense" align="center">
           <span>kintone UI Component は、kintone プラグイン設定画面やカスタマイズビュー、kintone 一覧画面のヘッダーメニュー要素など取得できる要素に配置することで、kintone ライクな見た目を実現することができます。</span>
         </div>
         <GridBlock
@@ -93,13 +93,70 @@ class Index extends React.Component {
           contents={props.children}
           layout={props.layout}
         />
+        {/* <img src="img/code-preview.png"></img> */}
+        <pre className="usecase_code">
+          <code class="hljs css language-javascript">
+            {`
+            (function() {
+              'use strict';
+
+              kintone.events.on([
+                'app.record.create.show',
+                'app.record.edit.show'
+              ], function(event) {
+                var space = kintone.app.record.getSpaceElement('space');
+                var checkbox = new Kuc.Checkbox({
+                  label: 'Fruit',
+                  requiredIcon: true,
+                  items: [
+                    {
+                      label: 'orange',
+                      value: 'Orange'
+                    },
+                    {
+                      label: 'apple',
+                      value: 'Apple'
+                    }
+                  ],
+                  value: ['Orange'],
+                  itemLayout: 'horizontal',
+                  error: 'Error occurred!',
+                  className: 'options-class',
+                  id: 'options-id',
+                  visible: true,
+                  disabled: false,
+                  borderVisible: true,
+                });
+                space.appendChild(checkbox);
+                checkbox.addEventListener('click', function(event) {
+                  console.log(event);
+                });
+              });
+            });
+            `}
+          </code>
+        </pre>
       </Container>
     );
 
-    const FeatureCallout = () => (
+    // const FeatureCallout = () => (
+    //   <div
+    //     className="productShowcaseSection paddingBottom"
+    //     style={{textAlign: 'center'}}>
+    //   </div>
+    // );
+
+    const Components = () => (
       <div
-        className="productShowcaseSection paddingBottom"
+        className="componentSection"
         style={{textAlign: 'center'}}>
+        <h2 align="center">Components</h2>
+        <div className="componentSection_components">
+          <iframe src="https://kuc-sb.web.app/iframe.html?id=checkbox--base" title="checkbox image"></iframe>
+          <iframe src="https://kuc-sb.web.app/iframe.html?id=button--base" title="button image"></iframe>
+          <iframe src="https://kuc-sb.web.app/iframe.html?id=dropdown--base" title="dropdown image"></iframe>
+          <iframe src="https://kuc-sb.web.app/iframe.html?id=multichoice--base" title="multichoice image"></iframe>
+        </div>
       </div>
     );
 
@@ -141,8 +198,9 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
+          <Components />
           <UseCases />
-          <FeatureCallout />
+          {/* <FeatureCallout /> */}
           <Description />
         </div>
       </div>
