@@ -184,13 +184,23 @@ class Index extends React.Component {
         padding={['bottom', 'top']}>
         <div
           className="descriptionSection"
-          style={{textAlign: 'center'}}>
+          style={{textAlign: 'left'}}>
           <blockquote className="quoteTop">
             <p>
               <strong className="quoteTop_title">Support Policy</strong><br/><br/>
-              kintone UI Component は、テクニカルサポートを通じたお問い合わせに対応しています。<br/>
-              <a href="https://faq.cybozu.info/alphascope/cybozu/web/kintone/Detail.aspx?id=1763&isCrawler=1#02">サポートへのお問い合わせ方法</a>をご確認の上、お問い合わせください。<br/>
-              ソースコードの変更、再配布および商用利用等は、ライセンスに従って利用可能です。
+              kintone UI Component は、サイボウズ社が開発・提供している OSS ツールです。<br/>
+              ご質問や機能リクエストについては <a href="https://github.com/kintone/kintone-ui-component/issues/new/choose">GitHub の Issue</a> や <a href="https://developer.cybozu.io/hc/ja/community/topics">cybozu developer network の community</a> をご利用ください。<br/>
+              （OSS へのコントリビュートもお待ちしております。）<br/><br/>
+              また、テクニカルサポートを通じた仕様についてのお問い合わせにも対応しています。<br/>
+              <a href="https://faq.cybozu.info/alphascope/cybozu/web/kintone/Detail.aspx?id=1763&isCrawler=1#02">サポートへのお問い合わせ方法</a>をご確認の上、お問合せください。<br/><br/>
+              ※ ソースコードの変更、再配布および商用利用等は、ライセンスに従ってご利用可能です。<br/><br/>
+              [ 弊社パートナー様向けサポート ]<br/>
+              次のように ライブラリ の仕様以外の内容についても、可能な限りサポートさせていただきます。<br/>
+              ・kintone UI Component の勉強会<br/>
+              ・具体的な実装方法<br/>
+              ・社内導入の支援<br/><br/>
+              こちらのメールアドレスまでお気軽にご相談ください。<br/>
+              sd@cybozu.co.jp
             </p>
           </blockquote>
         </div>
