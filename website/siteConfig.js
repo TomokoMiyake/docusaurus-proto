@@ -25,9 +25,9 @@ const siteConfig = {
     { blog: true, label: "Blog" },
     // {page: "help", label: "Help"},
     {
-      href: "https://github.com/TomokoMiyake/docusaurus-proto",
+      href: "https://github.com/kintone/kintone-ui-component",
       label: "GitHub",
-    }, // Need to change to kuc repo
+    },
     { search: true },
     { languages: false },
   ],
@@ -45,7 +45,7 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Cybozu Inc.`,
   highlight: {
     theme: "atom-one-dark", // "Nord", "Dracula", "Monokai Sublime"
-    defaultLang: "javascript"
+    defaultLang: "javascript",
   },
   onPageNav: "separate",
   docsSideNavCollapsible: true,

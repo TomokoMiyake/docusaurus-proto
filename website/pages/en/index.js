@@ -6,14 +6,54 @@
  */
 
 const React = require('react');
-
 const CompLibrary = require('../../core/CompLibrary.js');
-
 const MarkdownBlock = CompLibrary.MarkdownBlock;
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
-
 const translate = require('../../server/translate.js').translate;
+
+const textContent = {
+  codeExample: `
+\`\`\`javascript
+(function() {
+  'use strict';
+
+  kintone.events.on([
+    'app.record.create.show',
+    'app.record.edit.show'
+  ], function(event) {
+    var space = kintone.app.record.getSpaceElement('space');
+    var checkbox = new Kuc.Checkbox({
+      label: 'Fruit',
+      requiredIcon: true,
+      items: [
+        {
+          label: 'orange',
+          value: 'Orange'
+        },
+        {
+          label: 'apple',
+          value: 'Apple'
+        }
+      ],
+      value: ['Orange'],
+      itemLayout: 'horizontal',
+      error: 'Error occurred!',
+      className: 'options-class',
+      id: 'options-id',
+      visible: true,
+      disabled: false,
+      borderVisible: true,
+    });
+    space.appendChild(checkbox);
+    checkbox.addEventListener('click', function(event) {
+      console.log(event);
+    });
+  });
+});
+\`\`\`
+  `
+};
 
 class HomeSplash extends React.Component {
   render() {
@@ -93,49 +133,12 @@ class Index extends React.Component {
           contents={props.children}
           layout={props.layout}
         />
-        {/* <img src="img/code-preview.png"></img> */}
-        <pre className="usecase_code">
-          <code class="hljs css language-javascript">
-            {`
-            (function() {
-              'use strict';
-
-              kintone.events.on([
-                'app.record.create.show',
-                'app.record.edit.show'
-              ], function(event) {
-                var space = kintone.app.record.getSpaceElement('space');
-                var checkbox = new Kuc.Checkbox({
-                  label: 'Fruit',
-                  requiredIcon: true,
-                  items: [
-                    {
-                      label: 'orange',
-                      value: 'Orange'
-                    },
-                    {
-                      label: 'apple',
-                      value: 'Apple'
-                    }
-                  ],
-                  value: ['Orange'],
-                  itemLayout: 'horizontal',
-                  error: 'Error occurred!',
-                  className: 'options-class',
-                  id: 'options-id',
-                  visible: true,
-                  disabled: false,
-                  borderVisible: true,
-                });
-                space.appendChild(checkbox);
-                checkbox.addEventListener('click', function(event) {
-                  console.log(event);
-                });
-              });
-            });
-            `}
-          </code>
-        </pre>
+        <div className="usecase_code">
+          <MarkdownBlock>{textContent.codeExample}</MarkdownBlock>
+        </div>
+        <div className="usecase_code">
+          <MarkdownBlock>{textContent.codeExample}</MarkdownBlock>
+        </div>
       </Container>
     );
 
@@ -146,19 +149,19 @@ class Index extends React.Component {
     //   </div>
     // );
 
-    const Components = () => (
-      <div
-        className="componentSection"
-        style={{textAlign: 'center'}}>
-        <h2 align="center">Components</h2>
-        <div className="componentSection_components">
-          <iframe src="https://kuc-sb.web.app/iframe.html?id=checkbox--base" title="checkbox image"></iframe>
-          <iframe src="https://kuc-sb.web.app/iframe.html?id=button--base" title="button image"></iframe>
-          <iframe src="https://kuc-sb.web.app/iframe.html?id=dropdown--base" title="dropdown image"></iframe>
-          <iframe src="https://kuc-sb.web.app/iframe.html?id=multichoice--base" title="multichoice image"></iframe>
-        </div>
-      </div>
-    );
+    // const Components = () => (
+    //   <div
+    //     className="componentSection"
+    //     style={{textAlign: 'center'}}>
+    //     <h2 align="center">Components</h2>
+    //     <div className="componentSection_components">
+    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=checkbox--base" title="checkbox image"></iframe>
+    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=button--base" title="button image"></iframe>
+    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=dropdown--base" title="dropdown image"></iframe>
+    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=multichoice--base" title="multichoice image"></iframe>
+    //     </div>
+    //   </div>
+    // );
 
     const UseCases = () => (
       <Block id="usecase" layout="twoColumn">
@@ -180,25 +183,28 @@ class Index extends React.Component {
     );
 
     const Description = () => (
-      <div
-        className="descriptionSection"
-        style={{textAlign: 'center'}}>
-        <blockquote className="quoteTop">
-          <p>
-            <strong className="quoteTop_title">Support Policy</strong><br/><br/>
-            kintone UI Component は、テクニカルサポートを通じたお問い合わせに対応しています。<br/>
-            <a href="https://faq.cybozu.info/alphascope/cybozu/web/kintone/Detail.aspx?id=1763&isCrawler=1#02">サポートへのお問い合わせ方法</a>をご確認の上、お問い合わせください。<br/>
-            ソースコードの変更、再配布および商用利用等は、ライセンスに従って利用可能です。
-          </p>
-        </blockquote>
-      </div>
+      <Container
+        padding={['bottom', 'top']}>
+        <div
+          className="descriptionSection"
+          style={{textAlign: 'center'}}>
+          <blockquote className="quoteTop">
+            <p>
+              <strong className="quoteTop_title">Support Policy</strong><br/><br/>
+              kintone UI Component は、テクニカルサポートを通じたお問い合わせに対応しています。<br/>
+              <a href="https://faq.cybozu.info/alphascope/cybozu/web/kintone/Detail.aspx?id=1763&isCrawler=1#02">サポートへのお問い合わせ方法</a>をご確認の上、お問い合わせください。<br/>
+              ソースコードの変更、再配布および商用利用等は、ライセンスに従って利用可能です。
+            </p>
+          </blockquote>
+        </div>
+      </Container>
     );
 
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Components />
+          {/* <Components /> */}
           <UseCases />
           {/* <FeatureCallout /> */}
           <Description />
