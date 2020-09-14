@@ -136,9 +136,6 @@ class Index extends React.Component {
         <div className="usecase_code">
           <MarkdownBlock>{textContent.codeExample}</MarkdownBlock>
         </div>
-        <div className="usecase_code">
-          <MarkdownBlock>{textContent.codeExample}</MarkdownBlock>
-        </div>
       </Container>
     );
 
