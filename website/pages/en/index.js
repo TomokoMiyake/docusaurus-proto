@@ -119,22 +119,20 @@ class Index extends React.Component {
     const {config: siteConfig, language = ''} = this.props;
     const {baseUrl} = siteConfig;
 
-    const Block = props => (
+    const UseCase = () => (
       <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <h2 align="center">Use Cases</h2>
+        padding={['bottom', 'top']}>
+        <h2 align="center">Use Case</h2>
         <div className="usecase_sentense" align="center">
-          <span>kintone UI Component は、kintone プラグイン設定画面やカスタマイズビュー、kintone 一覧画面のヘッダーメニュー要素など取得できる要素に配置することで、kintone ライクな見た目を実現することができます。</span>
+          <span>kintone UI Component は、kintone 一覧画面のヘッダーメニュー要素など取得できる要素、kintone プラグイン設定画面やカスタマイズビューに配置することで、kintone ライクな見た目を実現することができます。</span>
         </div>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
-        <div className="usecase_code">
-          <MarkdownBlock>{textContent.codeExample}</MarkdownBlock>
+        <div className="usecase_group">
+          <div className="usecase_image">
+            <img src="img/kuc_demo_edit.png" />
+          </div>
+          <div className="usecase_code">
+            <MarkdownBlock>{textContent.codeExample}</MarkdownBlock>
+          </div>
         </div>
       </Container>
     );
@@ -160,25 +158,6 @@ class Index extends React.Component {
     //   </div>
     // );
 
-    const UseCases = () => (
-      <Block id="usecase" layout="twoColumn">
-        {[
-          {
-            // content: '',
-            image: `${baseUrl}img/kuc_demo_edit.png`,
-            imageAlign: 'bottom',
-            // title: 'Use Case One',
-          },
-          {
-            // content: '',
-            image: `${baseUrl}img/kuc_demo_index.png`,
-            imageAlign: 'bottom',
-            // title: 'Use Case Two',
-          }
-        ]}
-      </Block>
-    );
-
     const Description = () => (
       <Container
         padding={['bottom', 'top']}>
@@ -188,7 +167,7 @@ class Index extends React.Component {
           <blockquote className="quoteTop">
             <p>
               <strong className="quoteTop_title">Support Policy</strong><br/><br/>
-              kintone UI Component は、サイボウズ社が開発・提供している OSS ツールです。<br/>
+              kintone UI Component は、サイボウズ社が開発・提供している OSS です。<br/>
               ご質問や機能リクエストについては <a href="https://github.com/kintone/kintone-ui-component/issues/new/choose">GitHub の Issue</a> や <a href="https://developer.cybozu.io/hc/ja/community/topics">cybozu developer network の community</a> をご利用ください。<br/>
               （OSS へのコントリビュートもお待ちしております。）<br/><br/>
               また、テクニカルサポートを通じた仕様についてのお問い合わせにも対応しています。<br/>
@@ -196,9 +175,9 @@ class Index extends React.Component {
               ※ ソースコードの変更、再配布および商用利用等は、ライセンスに従ってご利用可能です。<br/><br/>
               [ 弊社パートナー様向けサポート ]<br/>
               次のように ライブラリ の仕様以外の内容についても、可能な限りサポートさせていただきます。<br/>
+              相談内容によってはお受けできない場合があります。予めご了承ください。<br/>
               ・kintone UI Component の勉強会<br/>
-              ・具体的な実装方法<br/>
-              ・社内導入の支援<br/><br/>
+              ・kintone UI Component の具体的な実装方法<br/><br/>
               こちらのメールアドレスまでお気軽にご相談ください。<br/>
               sd@cybozu.co.jp
             </p>
@@ -212,7 +191,7 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           {/* <Components /> */}
-          <UseCases />
+          <UseCase />
           {/* <FeatureCallout /> */}
           <Description />
         </div>

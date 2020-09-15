@@ -66,23 +66,34 @@ a:hover {
 .componentSection {
     padding: 0px 20px 0px 20px;
 }
-#usecase img {
-    max-width: 400px;
+.usecase_sentense {
+    padding: 10px;
+}
+.usecase_group {
+    text-align: center;
+}
+.usecase_image {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+.usecase_image img {
+    max-width: 500px;
     background: #FFF;
     border-radius: 3px;
     box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 }
-.usecase_sentense {
-    padding: 10px;
-}
 .usecase_code {
+    display: inline-block;
+    margin: 5px;
+    text-align: left;
     color: #fff;
     line-height: 1.5;
     background-color: #2b3137;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     border-radius: 3px;
     height: auto;
-    max-height: 200px;
+    max-height: 250px;
     overflow: auto;
     word-break: normal !important;
     word-wrap: normal !important;
