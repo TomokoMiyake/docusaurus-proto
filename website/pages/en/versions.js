@@ -6,13 +6,9 @@
  */
 
 const React = require('react');
-
 const CompLibrary = require('../../core/CompLibrary');
-
 const Container = CompLibrary.Container;
-
 const CWD = process.cwd();
-
 const versions = require(`${CWD}/versions.json`);
 
 function Versions(props) {
@@ -24,10 +20,10 @@ function Versions(props) {
       <Container className="mainContainer versionsContainer">
         <div className="post">
           <header className="postHeader">
-            <h1>{siteConfig.title} Versions</h1>
+            <h1>Versions</h1>
           </header>
-          <p>New versions of this project are released every so often.</p>
           <h3 id="latest">Current version (Stable)</h3>
+          <p>現在の最新の安定バージョンです。</p>
           <table className="versions">
             <tbody>
               <tr>
@@ -48,34 +44,8 @@ function Versions(props) {
               </tr>
             </tbody>
           </table>
-          <p>
-            This is the version that is configured automatically when you first
-            install this project.
-          </p>
-          <h3 id="rc">Pre-release versions</h3>
-          <table className="versions">
-            <tbody>
-              <tr>
-                <th>master</th>
-                <td>
-                  {/* You are supposed to change this href where appropriate
-                        Example: href="<baseUrl>/docs(/:language)/next/:id" */}
-                  <a
-                    href={`${siteConfig.baseUrl}${siteConfig.docsUrl}/${
-                      props.language ? props.language + '/' : ''
-                    }next/getting-started/quick-start`}>
-                    Documentation
-                  </a>
-                </td>
-                <td>
-                  <a href={repoUrl}>Source Code</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Other text describing this section.</p>
           <h3 id="archive">Past Versions</h3>
-          <p>Here you can find previous versions of the documentation.</p>
+          <p>過去のバージョンです。</p>
           <table className="versions">
             <tbody>
               {versions.map(
@@ -103,10 +73,28 @@ function Versions(props) {
               )}
             </tbody>
           </table>
-          <p>
-            You can find past versions of this project on{' '}
-            <a href={repoUrl}>GitHub</a>.
-          </p>
+          <h3 id="rc">Pre-release versions</h3>
+          <p>プレリリースバージョンです。</p>
+          <table className="versions">
+            <tbody>
+              <tr>
+                <th>master</th>
+                <td>
+                  {/* You are supposed to change this href where appropriate
+                        Example: href="<baseUrl>/docs(/:language)/next/:id" */}
+                  <a
+                    href={`${siteConfig.baseUrl}${siteConfig.docsUrl}/${
+                      props.language ? props.language + '/' : ''
+                    }next/getting-started/quick-start`}>
+                    Documentation
+                  </a>
+                </td>
+                <td>
+                  <a href={repoUrl}>Source Code</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </Container>
     </div>

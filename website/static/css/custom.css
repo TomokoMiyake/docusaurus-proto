@@ -78,7 +78,7 @@ a:hover {
     text-align: center;
 }
 .usecase_image img {
-    max-width: 500px;
+    max-width: 480px;
     background: #FFF;
     border-radius: 3px;
     box-shadow: 0 0px 20px rgba(0,0,0,0.2);
@@ -93,7 +93,7 @@ a:hover {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     border-radius: 3px;
     height: auto;
-    max-height: 250px;
+    max-height: 235px;
     overflow: auto;
     word-break: normal !important;
     word-wrap: normal !important;

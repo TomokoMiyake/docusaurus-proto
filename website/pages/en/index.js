@@ -18,39 +18,30 @@ const textContent = {
 (function() {
   'use strict';
 
-  kintone.events.on([
-    'app.record.create.show',
-    'app.record.edit.show'
-  ], function(event) {
-    var space = kintone.app.record.getSpaceElement('space');
-    var checkbox = new Kuc.Checkbox({
-      label: 'Fruit',
-      requiredIcon: true,
-      items: [
-        {
-          label: 'orange',
-          value: 'Orange'
-        },
-        {
-          label: 'apple',
-          value: 'Apple'
-        }
-      ],
-      value: ['Orange'],
-      itemLayout: 'horizontal',
-      error: 'Error occurred!',
-      className: 'options-class',
-      id: 'options-id',
-      visible: true,
-      disabled: false,
-      borderVisible: true,
+  kintone.events.on('app.record.index.show', function(event) {
+    var header = kintone.app.getHeaderMenuSpaceElement();
+
+    var buttonSubmit = new Kuc.Button({
+      text: 'Submit',
+      type: 'submit'
     });
-    space.appendChild(checkbox);
-    checkbox.addEventListener('click', function(event) {
+    buttonSubmit.addEventListener('click', function(event) {
       console.log(event);
     });
+
+    var buttonAlert = new Kuc.Button({
+      text: 'Alert',
+      type: 'alert'
+    });
+    buttonAlert.addEventListener('click', function(event) {
+      console.log(event);
+    });
+
+    header.appendChild(buttonSubmit);
+    header.appendChild(buttonAlert);
   });
-});
+})();
+
 \`\`\`
   `
 };
@@ -128,7 +119,7 @@ class Index extends React.Component {
         </div>
         <div className="usecase_group">
           <div className="usecase_image">
-            <img src="img/kuc_demo_edit.png" />
+            <img src="img/usecase_button.png" />
           </div>
           <div className="usecase_code">
             <MarkdownBlock>{textContent.codeExample}</MarkdownBlock>
@@ -169,12 +160,12 @@ class Index extends React.Component {
               <strong className="quoteTop_title">Support Policy</strong><br/><br/>
               kintone UI Component は、サイボウズ社が開発・提供している OSS です。<br/>
               ご質問や機能リクエストについては <a href="https://github.com/kintone/kintone-ui-component/issues/new/choose">GitHub の Issue</a> や <a href="https://developer.cybozu.io/hc/ja/community/topics">cybozu developer network の community</a> をご利用ください。<br/>
-              （OSS へのコントリビュートもお待ちしております。）<br/><br/>
+              OSS へのコントリビュートもお待ちしております。<br/><br/>
               また、テクニカルサポートを通じた仕様についてのお問い合わせにも対応しています。<br/>
               <a href="https://faq.cybozu.info/alphascope/cybozu/web/kintone/Detail.aspx?id=1763&isCrawler=1#02">サポートへのお問い合わせ方法</a>をご確認の上、お問合せください。<br/><br/>
-              ※ ソースコードの変更、再配布および商用利用等は、ライセンスに従ってご利用可能です。<br/><br/>
+              ソースコードの変更、再配布および商用利用等は、ライセンスに従ってご利用可能です。<br/><br/>
               [ 弊社パートナー様向けサポート ]<br/>
-              次のように ライブラリ の仕様以外の内容についても、可能な限りサポートさせていただきます。<br/>
+              次のようにライブラリの仕様以外の内容についても、可能な限りサポートさせていただきます。<br/>
               相談内容によってはお受けできない場合があります。予めご了承ください。<br/>
               ・kintone UI Component の勉強会<br/>
               ・kintone UI Component の具体的な実装方法<br/><br/>
