@@ -179,7 +179,7 @@ class Index extends React.Component {
               ・kintone UI Component の勉強会<br/>
               ・kintone UI Component の具体的な実装方法<br/><br/>
               こちらのメールアドレスまでお気軽にご相談ください。<br/>
-              sd@cybozu.co.jp
+              <img src="img/info.png" />
             </p>
           </blockquote>
         </div>
