@@ -9,12 +9,10 @@
         "ids": [
           "components/desktop/button",
           "components/desktop/checkbox",
-          "components/desktop/dialog",
           "components/desktop/dropdown",
           "components/desktop/multichoice",
           "components/desktop/notification",
           "components/desktop/radio-button",
-          "components/desktop/readonly-table",
           "components/desktop/spinner",
           "components/desktop/text",
           "components/desktop/textarea"
