@@ -6,11 +6,11 @@ sidebar_label: RadioButton
 
 # Overview
 
-RadioButton は複数選択肢の中から一つの値を選択することができます。。
+RadioButton は複数選択肢の中から一つの値を選択することができます。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new RadioButton({
-  value : 'Orange',,
+var component = new Kuc.RadioButton({
+  value : 'Orange',
   visible : true,
   items : [
     { 

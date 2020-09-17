@@ -10,9 +10,7 @@ original_id: textarea
 TextArea は、複数行のテキストを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new TextArea({
-  label: 'Fruit',
-  visible : true
+var component = new Kuc.TextArea({
 });
 ```
 

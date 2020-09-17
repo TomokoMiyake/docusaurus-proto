@@ -10,7 +10,7 @@ original_id: multichoice
 MultiChoice は複数選択肢の中から複数の値を選択することができます。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MultiChoice({
+var component = new Kuc.MultiChoice({
   value : ['Orange', 'Grape'],
   visible : true,
   items : [

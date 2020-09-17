@@ -9,8 +9,8 @@ sidebar_label: MobileRadioButton
 MobileRadioButton は複数選択肢の中から一つの値を選択することができます。。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MobileRadioButton({
-  value : 'Orange',,
+var component = new Kuc.MobileRadioButton({
+  value : 'Orange',
   visible : true,
   items : [
     { 

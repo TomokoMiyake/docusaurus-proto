@@ -9,9 +9,7 @@ sidebar_label: Text
 Text は、単一行のテキストを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new Text({
-  label: 'Fruit',
-  visible: true
+var component = new Kuc.Text({
 });
 ```
 

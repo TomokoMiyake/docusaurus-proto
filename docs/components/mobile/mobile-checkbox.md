@@ -8,18 +8,18 @@ sidebar_label: MobileCheckbox
 
 MobileCheckbox は、複数選択のチェックボックスを表示します。
 
-```KUCComponentRenderer {"id":"_render"}
-var component = new MobileCheckbox({
-  value :  'Orange',
+```KUCComponentRenderer {"id":"mobile_checkbox_render"}
+var component = new Kuc.MobileCheckbox({
+  value : ['Orange'],
   visible : true,
   items : [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     },
   ]
 });

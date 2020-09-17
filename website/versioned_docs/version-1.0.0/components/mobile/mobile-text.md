@@ -10,9 +10,7 @@ original_id: mobile-text
 MobileText は、単一行のテキストを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MobileText({
-  label: 'Fruit',
-  visible: true
+var component = new Kuc.MobileText({
 });
 ```
 

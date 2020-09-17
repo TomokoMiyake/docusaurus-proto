@@ -9,7 +9,7 @@ sidebar_label: Notification
 Notification は、ポップアップの通知を表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new Notification({
+var component = new Kuc.Notification({
   text:  'Error occurred!'
 });
 ```

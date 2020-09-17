@@ -10,7 +10,7 @@ original_id: readonly-table
 ReadOnlyTable は、kintone 詳細画面の読み取りテーブルを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new ReadOnlyTable({
+var component = new Kuc.ReadOnlyTable({
   label: 'Table'
   columns: [
     {

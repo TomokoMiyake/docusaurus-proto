@@ -9,7 +9,7 @@ sidebar_label: MobileButton
 MobileButton は、ボタンを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MobileButton({
+var component = new Kuc.MobileButton({
   text: 'Submit',
   type: 'submit',
   visible : true

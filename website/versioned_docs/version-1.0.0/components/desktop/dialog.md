@@ -10,7 +10,7 @@ original_id: dialog
 Dialog は、ダイアログボックスを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new Dialog({
+var component = new Kuc.Dialog({
   content: '<div>This is Content</div>'
 });
 ```

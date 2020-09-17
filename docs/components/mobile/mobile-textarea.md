@@ -9,9 +9,7 @@ sidebar_label: MobileTextArea
 MobileTextArea は、複数行のテキストを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MobileTextArea({
-  label: 'Fruit',
-  visible : true
+var component = new Kuc.MobileTextArea({
 });
 ```
 
