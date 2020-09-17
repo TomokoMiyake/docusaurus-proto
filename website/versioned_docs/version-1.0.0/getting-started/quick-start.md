@@ -1,5 +1,5 @@
 ---
-id: version-0.1.0-quick-start
+id: version-1.0.0-quick-start
 title: Quick Start
 sidebar_label: Quick Start
 original_id: quick-start

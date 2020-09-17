@@ -8,20 +8,14 @@ sidebar_label: Notification
 
 Notification は、ポップアップの通知を表示します。
 
-```KUCComponentRenderer {"id":"notification_render"}
-var buttonComponent = new Kuc.Button({
-  text: 'Open',
-  type: 'submit',
-  visible : true
-});
-var component = new Kuc.Notification({
+```KUCComponentRenderer {"id":"_render"}
+var component = new Notification({
   text:  'Error occurred!'
 });
-buttonComponent.addEventListener('click', function() {
-  component.open();
-});
 ```
+
 ---
+
 # Specification
 
 ## Property
@@ -36,7 +30,7 @@ buttonComponent.addEventListener('click', function() {
 
 ## Constructor
 
-Notification(options)
+Notification(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
@@ -72,7 +66,7 @@ none
 全てのパラメータを指定した場合のサンプルコードです。
 
 ```javascript
-var notification = new kintoneUIComponent.Notification({
+var notification = new Kuc.Notification({
   text:  'Error occurred!',
   type: 'danger',
   className: 'options-class'

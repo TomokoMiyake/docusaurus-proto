@@ -1,31 +1,18 @@
 ---
-id: multichoice
-title: MultiChoice
-sidebar_label: MultiChoice
+id: version-1.0.0-mobile-textarea
+title: MobileTextArea
+sidebar_label: MobileTextArea
+original_id: mobile-textarea
 ---
 
 # Overview
 
-MultiChoice は複数選択肢の中から複数の値を選択することができます。
+MobileTextArea は、複数行のテキストを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MultiChoice({
-  value : ['Orange', 'Grape'],
-  visible : true,
-  items : [
-    { 
-      label: 'orange',
-      value: 'Orange' 
-    },
-    { 
-      label: 'apple',
-      value: 'Apple' 
-    },
-    { 
-      label: 'grape',
-      value: 'Grape' 
-    }
-  ]
+var component = new MobileTextArea({
+  label: 'Fruit',
+  visible : true
 });
 ```
 
@@ -40,31 +27,30 @@ var component = new MultiChoice({
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
 | className | string | "" | コンポーネントの class 名 ||
-| error | string | "" | エラーに表示するテキスト | 未指定、あるいは空文字の場合、error は表示されない |
+| error | string | "" | エラーに表示するテキスト | 未指定、あるいは空文字 の場合、error は表示されない |
 | id | string | "" | コンポーネントの id 名 ||
 | label | string | "" | コンポーネントの説明ラベル | 未指定、あるいは空文字の場合、label は表示されない |
-| value | string | "" | 選択されている値 | value が未指定の場合、何も更新されない |
+| placeholder | string | "" | 空欄時に入力例として表示されるテキスト ||
+| value | string | "" | 表示されるテキスト ||
 | disabled | boolean | false | コンポーネントの編集可/不可設定 ||
 | requiredIcon | boolean | false | コンポーネントの必須アイコン表示/非表示設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
-| items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列ではない場合、エラーを出力する |
-| Item.label | string | null | 各選択肢のテキスト | Item.label が未指定の場合、UI 上は Item.value の値が表示される |
-| Item.value | string | null | 各選択肢の値 | Item.value の値が重複した場合、エラーを出力する |
 
 ## Event
+
 指定できるイベントの一覧です。
 
 | Name | Type | Description | Remark |
 | :--- | :--- | :--- | :--- |
 | change | function | 値が変更された時のイベントハンドラ | 引数には Event の event オブジェクトをとる<br><br>event.detail で以下の値を受け取ることができる<br>event.detail.oldValue : 変更前のvalueの値<br>event.detail.value : 変更後のvalueの値 |
+| focus | function | フォーカスされた時のイベントハンドラ | 引数には Event の event オブジェクトをとる<br><br>event.detail で以下の値を受け取ることができる<br>event.detail.value : focus時のvalueの値 |
 
 ## Constructor
 
-Dropdown(options)  
+TextArea(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
-
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
 | options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
@@ -76,33 +62,24 @@ Dropdown(options)
 
 ```javascript
 var space = kintone.app.record.getSpaceElement('space');
-var multiChoice = new Kuc.MultiChoice({
+var mobileTextArea = new Kuc.MobileTextArea({
   label: 'Fruit',
-  requriedIcon: false,
-  items: [
-    { 
-      label: 'orange',
-      value: 'Orange' 
-    },
-    { 
-      label: 'apple',
-      value: 'Apple' 
-    },
-    { 
-      label: 'grape',
-      value: 'Grape' 
-    }
-  ],
-  value : ['Orange', 'Grape'],
+  requiredIcon: true,
+  placeholder: 'Apple',
+  value: 'Apple',
   error: 'Error occurred!',
   className: 'options-class',
   id: 'options-id',
   visible: true,
   disabled: false
 });
-space.appendChild(multiChoice);
+space.appendChild(mobileTextArea);
 
-multiChoice.addEventListener('change', function(event) {
+mobileTextArea.addEventListener('change', function(event) {
+  console.log(event);
+});
+
+mobileTextArea.addEventListener('focus', function(event) {
   console.log(event);
 });
 ```

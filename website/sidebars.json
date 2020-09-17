@@ -16,7 +16,6 @@
           "components/desktop/radio-button",
           "components/desktop/readonly-table",
           "components/desktop/spinner",
-          "components/desktop/table",
           "components/desktop/text",
           "components/desktop/textarea"
         ]
@@ -27,7 +26,9 @@
         "ids": [
           "components/mobile/mobile-button",
           "components/mobile/mobile-checkbox",
-          "components/mobile/mobile-text"
+          "components/mobile/mobile-radio-button",
+          "components/mobile/mobile-text",
+          "components/mobile/mobile-textarea"
         ]
       }
     ]

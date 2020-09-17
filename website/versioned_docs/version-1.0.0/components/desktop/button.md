@@ -1,15 +1,16 @@
 ---
-id: mobile-button
-title: MobileButton
-sidebar_label: MobileButton
+id: version-1.0.0-button
+title: Button
+sidebar_label: Button
+original_id: button
 ---
 
 # Overview
 
-MobileButton は、ボタンを表示します。
+Button は、ボタンを表示します。
 
-```KUCComponentRenderer {"id":"_render"}
-var component = new MobileButton({
+```KUCComponentRenderer {"id":"button_render"}
+var component = new Kuc.Button({
   text: 'Submit',
   type: 'submit',
   visible : true
@@ -29,7 +30,7 @@ var component = new MobileButton({
 | className | string | "" | コンポーネントの class 名 |  |
 | id | string | "" | コンポーネントの id 名 |  |
 | text | string | "" | ボタンに表示するテキスト ||
-| type | string | "normal" | ボタンのデザインタイプ | 以下を指定できる<br>"normal" : White(#ffffff)<br>"submit" : Blue(#206694) |
+| type | string | "normal" | ボタンのデザインタイプ | 以下を指定できる<br>"normal" : Gray(#f7f9fA)<br>"submit" : Blue(#3498db)<br>"alert" : Red(#e74c3c) |
 | disabled | boolean | false | コンポーネントの編集可/不可設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
 
@@ -39,7 +40,7 @@ var component = new MobileButton({
 
 | Name | Type | Description | Remark |
 | :--- | :--- | :--- | :--- |
-| click | function | クリックされた時のイベントハンドラ | 引数には Event の event オブジェクトをとる |
+| click | function | フォーカスされた時のイベントハンドラ | 引数には Event の event オブジェクトをとる |
 
 ## Constructor
 
@@ -60,7 +61,7 @@ Button(options)
 
 ```javascript
 var header = kintone.app.getHeaderMenuSpaceElement();
-var mobileButton = new Kuc.MobileButton({
+var button = new Kuc.Button({
     text: 'Submit',
     type: 'submit',
     className: 'options-class',
@@ -68,9 +69,9 @@ var mobileButton = new Kuc.MobileButton({
     visible: true,
     disabled: false
 });
-header.appendChild(mobileButton);
+header.appendChild(button);
 
-mobileButton.addEventListener('click', function(event) {
+button.addEventListener('click', function(event) {
   console.log(event);
 });
 ```

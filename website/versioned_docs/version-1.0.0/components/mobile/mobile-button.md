@@ -1,16 +1,16 @@
 ---
-id: version-0.1.0-button
-title: Button
-sidebar_label: Button
-original_id: button
+id: version-1.0.0-mobile-button
+title: MobileButton
+sidebar_label: MobileButton
+original_id: mobile-button
 ---
 
 # Overview
 
-Button は、ボタンを表示します。
+MobileButton は、ボタンを表示します。
 
-```KUCComponentRenderer {"id":"button_render"}
-var component = new Kuc.Button({
+```KUCComponentRenderer {"id":"_render"}
+var component = new MobileButton({
   text: 'Submit',
   type: 'submit',
   visible : true
@@ -30,14 +30,21 @@ var component = new Kuc.Button({
 | className | string | "" | コンポーネントの class 名 |  |
 | id | string | "" | コンポーネントの id 名 |  |
 | text | string | "" | ボタンに表示するテキスト ||
-| type | string | "normal" | ボタンのデザインタイプ | 以下を指定できる  "normal" : Gray(#F7F9FA)  "submit" : Blue(#3498DB)  "alert" : Red(#E74C3C)  "save" : Green(#91C36C) |
+| type | string | "normal" | ボタンのデザインタイプ | 以下を指定できる<br>"normal" : White(#ffffff)<br>"submit" : Blue(#206694) |
 | disabled | boolean | false | コンポーネントの編集可/不可設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
-| onClick | function | null | クリック時のイベントハンドラ設定 | 引数には MouseEvent の event オブジェクトをとる |
+
+## Event
+
+指定できるイベントの一覧です。
+
+| Name | Type | Description | Remark |
+| :--- | :--- | :--- | :--- |
+| click | function | クリックされた時のイベントハンドラ | 引数には Event の event オブジェクトをとる |
 
 ## Constructor
 
-Dropdown(options)  
+Button(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
@@ -54,16 +61,17 @@ Dropdown(options)
 
 ```javascript
 var header = kintone.app.getHeaderMenuSpaceElement();
-var button = new kintoneUIComponent.Button({
+var mobileButton = new Kuc.MobileButton({
     text: 'Submit',
     type: 'submit',
     className: 'options-class',
     id: 'options-id',
     visible: true,
-    disabled: false,
-    onClick: function(event) {
-      console.log(event);
-    }
+    disabled: false
 });
-header.appendChild(button);
+header.appendChild(mobileButton);
+
+mobileButton.addEventListener('click', function(event) {
+  console.log(event);
+});
 ```

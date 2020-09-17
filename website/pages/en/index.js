@@ -118,6 +118,7 @@ class Index extends React.Component {
           <span>kintone UI Component は、kintone 一覧画面のヘッダーメニュー要素など取得できる要素、kintone プラグイン設定画面やカスタマイズビューに配置することで、kintone ライクな見た目を実現することができます。</span>
         </div>
         <div className="usecase_group">
+          <h6>[ Button Component イメージ & サンプルコード ]</h6>
           <div className="usecase_image">
             <img src="img/usecase_button.png" />
           </div>

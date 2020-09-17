@@ -1,0 +1,43 @@
+{
+  "version-1.0.0-docs": {
+    "Getting Started": [
+      "version-1.0.0-getting-started/quick-start"
+    ],
+    "Components": [
+      "version-1.0.0-components/storybook-iframe-test",
+      {
+        "type": "subcategory",
+        "label": "Desktop",
+        "ids": [
+          "version-1.0.0-components/desktop/button",
+          "version-1.0.0-components/desktop/checkbox",
+          "version-1.0.0-components/desktop/dialog",
+          "version-1.0.0-components/desktop/dropdown",
+          "version-1.0.0-components/desktop/multichoice",
+          "version-1.0.0-components/desktop/notification",
+          "version-1.0.0-components/desktop/radio-button",
+          "version-1.0.0-components/desktop/readonly-table",
+          "version-1.0.0-components/desktop/spinner",
+          "version-1.0.0-components/desktop/text",
+          "version-1.0.0-components/desktop/textarea"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Mobile",
+        "ids": [
+          "version-1.0.0-components/mobile/mobile-button",
+          "version-1.0.0-components/mobile/mobile-checkbox",
+          "version-1.0.0-components/mobile/mobile-radio-button",
+          "version-1.0.0-components/mobile/mobile-text",
+          "version-1.0.0-components/mobile/mobile-textarea"
+        ]
+      }
+    ]
+  },
+  "version-1.0.0-tips": {
+    "Tips": [
+      "version-1.0.0-tips/installation"
+    ]
+  }
+}

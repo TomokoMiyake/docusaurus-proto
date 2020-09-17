@@ -1,16 +1,17 @@
 ---
-id: multichoice
-title: MultiChoice
-sidebar_label: MultiChoice
+id: version-1.0.0-mobile-radio-button
+title: MobileRadioButton
+sidebar_label: MobileRadioButton
+original_id: mobile-radio-button
 ---
 
 # Overview
 
-MultiChoice は複数選択肢の中から複数の値を選択することができます。
+MobileRadioButton は複数選択肢の中から一つの値を選択することができます。。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MultiChoice({
-  value : ['Orange', 'Grape'],
+var component = new MobileRadioButton({
+  value : 'Orange',,
   visible : true,
   items : [
     { 
@@ -20,10 +21,6 @@ var component = new MultiChoice({
     { 
       label: 'apple',
       value: 'Apple' 
-    },
-    { 
-      label: 'grape',
-      value: 'Grape' 
     }
   ]
 });
@@ -44,6 +41,7 @@ var component = new MultiChoice({
 | id | string | "" | コンポーネントの id 名 ||
 | label | string | "" | コンポーネントの説明ラベル | 未指定、あるいは空文字の場合、label は表示されない |
 | value | string | "" | 選択されている値 | value が未指定の場合、何も更新されない |
+| borderVisible | boolean | false | コンポーネントの境界線表示/非表示設定 ||
 | disabled | boolean | false | コンポーネントの編集可/不可設定 ||
 | requiredIcon | boolean | false | コンポーネントの必須アイコン表示/非表示設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
@@ -60,7 +58,7 @@ var component = new MultiChoice({
 
 ## Constructor
 
-Dropdown(options)  
+RadioButton(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
@@ -76,7 +74,7 @@ Dropdown(options)
 
 ```javascript
 var space = kintone.app.record.getSpaceElement('space');
-var multiChoice = new Kuc.MultiChoice({
+var mobileRadioButton = new Kuc.MobileRadioButton({
   label: 'Fruit',
   requriedIcon: false,
   items: [
@@ -87,22 +85,18 @@ var multiChoice = new Kuc.MultiChoice({
     { 
       label: 'apple',
       value: 'Apple' 
-    },
-    { 
-      label: 'grape',
-      value: 'Grape' 
     }
   ],
-  value : ['Orange', 'Grape'],
+  value : 'Orange',
   error: 'Error occurred!',
   className: 'options-class',
   id: 'options-id',
   visible: true,
   disabled: false
 });
-space.appendChild(multiChoice);
+space.appendChild(mobileRadioButton);
 
-multiChoice.addEventListener('change', function(event) {
+mobileRadioButton.addEventListener('change', function(event) {
   console.log(event);
 });
 ```

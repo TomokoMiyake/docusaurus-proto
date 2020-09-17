@@ -1,5 +1,5 @@
 ---
-id: version-0.1.0-checkbox
+id: version-1.0.0-checkbox
 title: Checkbox
 sidebar_label: Checkbox
 original_id: checkbox
@@ -45,15 +45,22 @@ var component = new Kuc.Checkbox({
 | disabled | boolean | false | コンポーネントの選択可/不可設定 ||
 | requiredIcon | boolean | false | コンポーネントの必須アイコン表示/非表示設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
-| items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列ではない場合、エラーを出力する |
+| items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列以外の場合、エラーを出力する |
 | Item.label | string | null | 各選択肢のテキスト | Item.label が未指定の場合、UI 上は Item.value の値が表示される |
 | Item.value | string | null | 各選択肢の値 | Item.value の値が重複した場合、エラーを出力する |
-| value | Array\<string\> | "" | 選択されている値 | value が配列以外の時、エラーを出力する<br>配列内の値が重複した場合、エラーを出力する |
-| onChange | function | null | 値が変更されたときのイベントハンドラ設定 | 引数には MouseEvent と KeyboardEvent の event オブジェクトをとる |
+| value | Array\<string\> | "" | 選択されている値 | value が配列以外の場合、エラーを出力する<br>配列内の値が重複した場合、エラーを出力する |
+
+## Event
+
+指定できるイベントの一覧です。
+
+| Name | Type | Description | Remark |
+| :--- | :--- | :--- | :--- |
+| change | function | 値が変更された時のイベントハンドラ | 引数には Event の event オブジェクトをとる<br><br>event.detail で以下の値を受け取ることができる<br>event.detail.oldValue : 変更前のvalueの値<br>event.detail.value : 変更後のvalueの値 |
 
 ## Constructor
 
-Checkbox(options)
+Checkbox(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
@@ -70,15 +77,15 @@ Checkbox(options)
 
 ```javascript
 var space = kintone.app.record.getSpaceElement('space');
-var checkbox = new kintoneUIComponent.Checkbox({
+var checkbox = new Kuc.Checkbox({
   label: 'Fruit',
   requiredIcon: true,
   items: [
-    {
+    { 
       label: 'orange',
       value: 'Orange'
     },
-    {
+    { 
       label: 'apple',
       value: 'Apple'
     }
@@ -90,10 +97,11 @@ var checkbox = new kintoneUIComponent.Checkbox({
   id: 'options-id',
   visible: true,
   disabled: false,
-  borderVisible: true,
-  onChange: function(event) {
-    console.log(event);
-  }
+  borderVisible: true
 });
 space.appendChild(checkbox);
+
+checkbox.addEventListener('change', function(event) {
+  console.log(event);
+});
 ```

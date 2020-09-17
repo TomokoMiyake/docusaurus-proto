@@ -7,7 +7,6 @@ sidebar_label: Dropdown
 # Overview
 
 Dropdown は複数選択肢の中から一つの値を選択することができます。
-（DropDown パーツの UI （ラベルやエラーを含まない最低限機能のみ）を埋め込む: 以下埋め込むコード例）
 
 ```KUCComponentRenderer {"id":"dropdown_render"}
 var component = new Kuc.Dropdown({
@@ -25,6 +24,7 @@ var component = new Kuc.Dropdown({
   ]
 });
 ```
+
 ---
 
 # Specification
@@ -46,11 +46,18 @@ var component = new Kuc.Dropdown({
 | items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列ではない場合、エラーを出力する |
 | Item.label | string | null | 各選択肢のテキスト | Item.label が未指定の場合、UI 上は Item.value の値が表示される |
 | Item.value | string | null | 各選択肢の値 | Item.value の値が重複した場合、エラーを出力する |
-| onChange | function | null | 値が変更されたときのイベントハンドラ設定 | 引数には MouseEvent と KeyboardEvent の event オブジェクトをとる |
+
+## Event
+
+指定できるイベントの一覧です。
+
+| Name | Type | Description | Remark |
+| :--- | :--- | :--- | :--- |
+| change | function | 値が変更された時のイベントハンドラ | 引数には Event の event オブジェクトをとる<br><br>event.detail で以下の値を受け取ることができる<br>event.detail.oldValue : 変更前のvalueの値<br>event.detail.value : 変更後のvalueの値 |
 
 ## Constructor
 
-Dropdown(options)
+Dropdown(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
@@ -66,17 +73,17 @@ Dropdown(options)
 
 ```javascript
 var space = kintone.app.record.getSpaceElement('space');
-var dropdown = new kintoneUIComponent.Dropdown({
+var dropdown = new Kuc.Dropdown({
   label: 'Fruit',
   requriedIcon: false,
   items: [
-    {
+    { 
       label: 'orange',
-      value: 'Orange'
+      value: 'Orange' 
     },
-    {
+    { 
       label: 'apple',
-      value: 'Apple'
+      value: 'Apple' 
     }
   ],
   value:  'Orange',
@@ -84,10 +91,11 @@ var dropdown = new kintoneUIComponent.Dropdown({
   className: 'options-class',
   id: 'options-id',
   visible: true,
-  disabled: false,
-  onChange: function(event) {
-    console.log(event);
-  }
+  disabled: false
 });
 space.appendChild(dropdown);
+
+dropdown.addEventListener('change', function(event) {
+  console.log(event);
+});
 ```

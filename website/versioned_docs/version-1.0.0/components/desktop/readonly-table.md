@@ -1,5 +1,5 @@
 ---
-id: version-0.1.0-readonly-table
+id: version-1.0.0-readonly-table
 title: ReadOnlyTable
 sidebar_label: ReadOnlyTable
 original_id: readonly-table
@@ -9,12 +9,13 @@ original_id: readonly-table
 
 ReadOnlyTable は、kintone 詳細画面の読み取りテーブルを表示します。
 
-```KUCComponentRenderer {"id":"readonly-table_render"}
-var component = new Kuc.ReadOnlyTable({
+```KUCComponentRenderer {"id":"_render"}
+var component = new ReadOnlyTable({
+  label: 'Table'
   columns: [
     {
       header: {
-        text: 'Fruit',
+        text: 'fruit',
       },
       visible: true
     },
@@ -23,23 +24,17 @@ var component = new Kuc.ReadOnlyTable({
         text: 'Producing area',
       },
       visible: true,
-    },
-    {
-      header: {
-        text: 'Price',
-      },
-      visible: true
     }
   ],
   data: [
-    ['Orange', 'Ehime', '400'],
-    ['Apple', 'Aomori', '200'],
-    ['Banana', 'Tokyo', '100']
+    ['Orange', 'Ehime']
   ],
   visible: true
 });
 ```
+
 ---
+
 # Specification
 
 ## Property
@@ -75,7 +70,7 @@ ReadOnlyTable(options)<br>
 
 ```javascript
 var space = kintone.app.record.getSpaceElement('space');
-var readOnlyTable = new kintoneUIComponent.ReadOnlyTable({
+var readOnlyTable = new Kuc.ReadOnlyTable({
   label: 'Table',
   columns: [
     {

@@ -1,5 +1,5 @@
 ---
-id: version-0.1.0-storybook-iframe-test
+id: version-1.0.0-storybook-iframe-test
 title: Storybook iframe test
 sidebar_label: Storybook iframe test
 original_id: storybook-iframe-test

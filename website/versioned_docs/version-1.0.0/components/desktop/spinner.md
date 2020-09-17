@@ -1,5 +1,5 @@
 ---
-id: version-0.1.0-spinner
+id: version-1.0.0-spinner
 title: Spinner
 sidebar_label: Spinner
 original_id: spinner
@@ -9,20 +9,13 @@ original_id: spinner
 
 Spinner は、ローディングスピナーを表示します。
 
-```KUCComponentRenderer {"id":"spinner_render"}
-var component = new Kuc.Spinner({
-  text: 'now loading...'
-});
-var buttonComponent = new Kuc.Button({
-  text: 'Open',
-  type: 'submit',
-  visible : true
-});
-buttonComponent.addEventListener('click', function() {
-  component.open();
+```KUCComponentRenderer {"id":"_render"}
+var component = new Spinner({
 });
 ```
+
 ---
+
 # Specification
 
 ## Property
@@ -33,12 +26,12 @@ buttonComponent.addEventListener('click', function() {
 | :--- | :--- | :--- | :--- | :--- |
 | text | string | "" | ローダーアイコン下部に表示するテキスト | text が未指定もしくは空文字の場合*は、初期値を表示する |
 
-\* textが未指定もしくは空文字の場合は、アクセシビリティを考慮して、visually-hidden classを
+\* textが未指定もしくは空文字の場合は、アクセシビリティを考慮して、visually-hidden classを  
 付与し、"now loading…" の文言を視覚的に見えない状態で表示します
 
 ## Constructor
 
-Spinner(options)
+Spinner(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
@@ -73,7 +66,7 @@ none
 全てのパラメータを指定した場合のサンプルコードです。
 
 ```javascript
-var spinner = new kintoneUIComponent.Spinner({
+var spinner = new Kuc.Spinner({
   text: 'now loading...'
 });
 spinner.open();

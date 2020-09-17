@@ -1,16 +1,17 @@
 ---
-id: multichoice
-title: MultiChoice
-sidebar_label: MultiChoice
+id: version-1.0.0-mobile-checkbox
+title: MobileCheckbox
+sidebar_label: MobileCheckbox
+original_id: mobile-checkbox
 ---
 
 # Overview
 
-MultiChoice は複数選択肢の中から複数の値を選択することができます。
+MobileCheckbox は、複数選択のチェックボックスを表示します。
 
 ```KUCComponentRenderer {"id":"_render"}
-var component = new MultiChoice({
-  value : ['Orange', 'Grape'],
+var component = new MobileCheckbox({
+  value :  'Orange',
   visible : true,
   items : [
     { 
@@ -21,10 +22,6 @@ var component = new MultiChoice({
       label: 'apple',
       value: 'Apple' 
     },
-    { 
-      label: 'grape',
-      value: 'Grape' 
-    }
   ]
 });
 ```
@@ -40,18 +37,20 @@ var component = new MultiChoice({
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
 | className | string | "" | コンポーネントの class 名 ||
-| error | string | "" | エラーに表示するテキスト | 未指定、あるいは空文字の場合、error は表示されない |
+| error | string | "" | エラーに表示するテキスト | 未指定、あるいは空文字 の場合、error は表示されない |
 | id | string | "" | コンポーネントの id 名 ||
 | label | string | "" | コンポーネントの説明ラベル | 未指定、あるいは空文字の場合、label は表示されない |
-| value | string | "" | 選択されている値 | value が未指定の場合、何も更新されない |
-| disabled | boolean | false | コンポーネントの編集可/不可設定 ||
+| borderVisible | boolean | true | 選択肢を囲う枠線の表示/非表示設定 ||
+| disabled | boolean | false | コンポーネントの選択可/不可設定 ||
 | requiredIcon | boolean | false | コンポーネントの必須アイコン表示/非表示設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
-| items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列ではない場合、エラーを出力する |
+| items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列以外の場合、エラーを出力する |
 | Item.label | string | null | 各選択肢のテキスト | Item.label が未指定の場合、UI 上は Item.value の値が表示される |
 | Item.value | string | null | 各選択肢の値 | Item.value の値が重複した場合、エラーを出力する |
+| value | Array\<string\> | "" | 選択されている値 | value が配列以外の場合、エラーを出力する<br>配列内の値が重複した場合、エラーを出力する |
 
 ## Event
+
 指定できるイベントの一覧です。
 
 | Name | Type | Description | Remark |
@@ -60,7 +59,7 @@ var component = new MultiChoice({
 
 ## Constructor
 
-Dropdown(options)  
+Checkbox(options)  
 使用できるコンストラクタの一覧です。
 
 ### Parameter
@@ -70,15 +69,16 @@ Dropdown(options)
 | options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
 
 ---
+
 # Sample Code
 
 全てのパラメータを指定した場合のサンプルコードです。
 
 ```javascript
 var space = kintone.app.record.getSpaceElement('space');
-var multiChoice = new Kuc.MultiChoice({
+var mobileCheckbox = new Kuc.MobileCheckbox({
   label: 'Fruit',
-  requriedIcon: false,
+  requiredIcon: true,
   items: [
     { 
       label: 'orange',
@@ -87,22 +87,19 @@ var multiChoice = new Kuc.MultiChoice({
     { 
       label: 'apple',
       value: 'Apple' 
-    },
-    { 
-      label: 'grape',
-      value: 'Grape' 
     }
   ],
-  value : ['Orange', 'Grape'],
+  value: ['Orange'],
   error: 'Error occurred!',
   className: 'options-class',
   id: 'options-id',
   visible: true,
-  disabled: false
+  disabled: false,
+  borderVisible: true
 });
-space.appendChild(multiChoice);
+space.appendChild(mobileCheckbox);
 
-multiChoice.addEventListener('change', function(event) {
+mobileCheckbox.addEventListener('change', function(event) {
   console.log(event);
 });
 ```
