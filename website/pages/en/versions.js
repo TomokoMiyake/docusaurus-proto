@@ -20,8 +20,9 @@ function Versions(props) {
       <Container className="mainContainer versionsContainer">
         <div className="post">
           <header className="postHeader">
-            <h1>Versions</h1>
+            <h1>kintone UI Component Versions</h1>
           </header>
+          <p>本プロジェクトの新しいバージョンは定期的にリリースされます。</p>
           <h3 id="latest">Current version (Stable)</h3>
           <p>現在の最新の安定バージョンです。</p>
           <table className="versions">
@@ -45,7 +46,6 @@ function Versions(props) {
             </tbody>
           </table>
           <h3 id="archive">Past Versions</h3>
-          <p>過去のバージョンです。</p>
           <table className="versions">
             <tbody>
               {versions.map(
@@ -73,8 +73,9 @@ function Versions(props) {
               )}
             </tbody>
           </table>
+          <p>※ v0 系のバージョンは<a href="https://kintone.github.io/kintone-ui-component/latest/versions/">こちら</a>をご確認ください。</p>
           <h3 id="rc">Pre-release versions</h3>
-          <p>プレリリースバージョンです。</p>
+          <p>まだリリースされていない最新の変更も下記よりご確認いただけます。</p>
           <table className="versions">
             <tbody>
               <tr>
