@@ -5,12 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
-const CompLibrary = require('../../core/CompLibrary.js');
+const React = require("react");
+const CompLibrary = require("../../core/CompLibrary.js");
 const MarkdownBlock = CompLibrary.MarkdownBlock;
 const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
-const translate = require('../../server/translate.js').translate;
+const translate = require("../../server/translate.js").translate;
 
 const textContent = {
   codeExample: `
@@ -48,10 +47,10 @@ const textContent = {
 
 class HomeSplash extends React.Component {
   render() {
-    const {siteConfig, language = ''} = this.props;
+    const {siteConfig, language = ""} = this.props;
     const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
+    const langPart = `${language ? `${language}/` : ""}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
     const versionUrl = versions => `${baseUrl}${langPart}${versions}`;
 
@@ -97,7 +96,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
-            <Button href={docUrl('getting-started/quick-start.html')}>Get Started</Button>
+            <Button href={docUrl("getting-started/quick-start.html")}>Get Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -107,12 +106,12 @@ class HomeSplash extends React.Component {
 
 class Index extends React.Component {
   render() {
-    const {config: siteConfig, language = ''} = this.props;
+    const {config: siteConfig, language = ""} = this.props;
     const {baseUrl} = siteConfig;
 
     const UseCase = () => (
       <Container
-        padding={['bottom', 'top']}>
+        padding={["bottom", "top"]}>
         <h2 align="center">Use Case</h2>
         <div className="usecase_sentense" align="center">
           <span>kintone UI Component は、kintone 一覧画面のヘッダーメニュー要素など取得できる要素、kintone プラグイン設定画面やカスタマイズビューに配置することで、kintone ライクな見た目を実現することができます。</span>
@@ -129,33 +128,12 @@ class Index extends React.Component {
       </Container>
     );
 
-    // const FeatureCallout = () => (
-    //   <div
-    //     className="productShowcaseSection paddingBottom"
-    //     style={{textAlign: 'center'}}>
-    //   </div>
-    // );
-
-    // const Components = () => (
-    //   <div
-    //     className="componentSection"
-    //     style={{textAlign: 'center'}}>
-    //     <h2 align="center">Components</h2>
-    //     <div className="componentSection_components">
-    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=checkbox--base" title="checkbox image"></iframe>
-    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=button--base" title="button image"></iframe>
-    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=dropdown--base" title="dropdown image"></iframe>
-    //       <iframe src="https://kuc-sb.web.app/iframe.html?id=multichoice--base" title="multichoice image"></iframe>
-    //     </div>
-    //   </div>
-    // );
-
     const Description = () => (
       <Container
-        padding={['bottom', 'top']}>
+        padding={["bottom", "top"]}>
         <div
           className="descriptionSection"
-          style={{textAlign: 'left'}}>
+          style={{textAlign: "left"}}>
           <blockquote className="quoteTop">
             <p>
               <strong className="quoteTop_title">Support Policy</strong><br/><br/>
@@ -182,9 +160,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          {/* <Components /> */}
           <UseCase />
-          {/* <FeatureCallout /> */}
           <Description />
         </div>
       </div>

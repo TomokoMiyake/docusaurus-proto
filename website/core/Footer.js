@@ -5,24 +5,24 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+const React = require("react");
 
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
     const docsUrl = this.props.config.docsUrl;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
+    const langPart = `${language ? `${language}/` : ""}`;
     return `${baseUrl}${docsPart}${langPart}${doc}`;
   }
 
   pageUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
-    return baseUrl + (language ? `${language}/` : '') + doc;
+    return baseUrl + (language ? `${language}/` : "") + doc;
   }
 
   render() {
-    return (
+    return(
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
           <a href={this.props.config.baseUrl} className="nav-home">

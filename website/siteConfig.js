@@ -10,10 +10,6 @@ const RemarkablePlugins = require("./core/RemarkablePlugin");
 const siteConfig = {
   title: "Be a smart kintone developer with kintone UI Component.",
   tagline: "It will support your UI customization project.",
-  // For GitHub Pages hosting
-  // url: "https://tomokomiyake.github.io",
-  // baseUrl: "/docusaurus-proto/"",
-
   // For Netlify hosting
   url: "https://tomokomiyake.netlify.app",
   baseUrl: "/",

@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
-const CompLibrary = require('../../core/CompLibrary');
+const React = require("react");
+const CompLibrary = require("../../core/CompLibrary");
 const Container = CompLibrary.Container;
 const CWD = process.cwd();
 const versions = require(`${CWD}/versions.json`);
@@ -34,7 +34,7 @@ function Versions(props) {
                         Example: href="<baseUrl>/docs(/:language)/:id" */}
                   <a
                     href={`${siteConfig.baseUrl}${siteConfig.docsUrl}/${
-                      props.language ? props.language + '/' : ''
+                      props.language ? props.language + "/" : ""
                     }getting-started/quick-start`}>
                     Documentation
                   </a>
@@ -58,7 +58,7 @@ function Versions(props) {
                         Example: href="<baseUrl>/docs(/:language)/:version/:id" */}
                         <a
                           href={`${siteConfig.baseUrl}${siteConfig.docsUrl}/${
-                            props.language ? props.language + '/' : ''
+                            props.language ? props.language + "/" : ""
                           }${version}/getting-started/quick-start/`}>
                           Documentation
                         </a>
@@ -85,7 +85,7 @@ function Versions(props) {
                         Example: href="<baseUrl>/docs(/:language)/next/:id" */}
                   <a
                     href={`${siteConfig.baseUrl}${siteConfig.docsUrl}/${
-                      props.language ? props.language + '/' : ''
+                      props.language ? props.language + "/" : ""
                     }next/getting-started/quick-start`}>
                     Documentation
                   </a>

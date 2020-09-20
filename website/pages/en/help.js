@@ -5,37 +5,26 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
-
-const CompLibrary = require('../../core/CompLibrary.js');
-
+const React = require("react");
+const CompLibrary = require("../../core/CompLibrary.js");
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
-
-const translate = require('../../server/translate.js').translate;
+const translate = require("../../server/translate.js").translate;
 
 class Help extends React.Component {
   render() {
     const supportLinks = [
       {
-        content: (
-          <translate>
-            Learn more using this reference site.
-          </translate>
-        ),
-        title: <translate>Browse Docs</translate>,
+        content: "Learn more using this reference site.",
+        title: "Browse Docs",
       },
       {
-        content: (
-          <translate>
-            Ask questions about the documentation and project
-          </translate>
-        ),
-        title: <translate>Join the community</translate>,
+        content: "Ask questions about the documentation and project",
+        title: "Join the community",
       },
       {
-        content: <translate>Find out what's new with this project</translate>,
-        title: <translate>Stay up to date</translate>,
+        content: "Find out what's new with this project",
+        title: "Stay up to date",
       },
     ];
 
@@ -44,15 +33,9 @@ class Help extends React.Component {
         <Container className="mainContainer documentContainer postContainer">
           <div className="post">
             <header className="postHeader">
-              <h2>
-                <translate>Need help?</translate>
-              </h2>
+              <h2>Need help?</h2>
             </header>
-            <p>
-              <translate desc="statement made to reader">
-                This project is maintained by a dedicated group of people.
-              </translate>
-            </p>
+            <p>This project is maintained by a dedicated group of people.</p>
             <GridBlock contents={supportLinks} layout="threeColumn" />
           </div>
         </Container>
@@ -62,7 +45,7 @@ class Help extends React.Component {
 }
 
 Help.defaultProps = {
-  language: 'en',
+  language: "en",
 };
 
 module.exports = Help;
