@@ -1,7 +1,7 @@
 .DS_Store
-build/
-i18n/*
 node_modules
 package-lock.json
 yarn.lock
-# translated_docs
+website/build/
+website/i18n/*
+website/translated_docs
