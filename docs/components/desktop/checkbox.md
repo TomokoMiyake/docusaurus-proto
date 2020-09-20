@@ -11,6 +11,7 @@ Checkbox は、複数選択のチェックボックスを表示します。
 ```KUCComponentRenderer {"id":"checkbox_render"}
 var component = new Kuc.Checkbox({
   value : ['Orange'],
+  visible : true,
   items : [
     {
       label: 'orange',

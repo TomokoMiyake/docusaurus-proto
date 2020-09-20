@@ -77,13 +77,13 @@ var dropdown = new Kuc.Dropdown({
   label: 'Fruit',
   requriedIcon: false,
   items: [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     }
   ],
   value:  'Orange',

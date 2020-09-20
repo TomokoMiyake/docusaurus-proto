@@ -79,13 +79,13 @@ var mobileCheckbox = new Kuc.MobileCheckbox({
   label: 'Fruit',
   requiredIcon: true,
   items: [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     }
   ],
   value: ['Orange'],

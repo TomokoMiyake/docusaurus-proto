@@ -13,13 +13,13 @@ var component = new Kuc.MobileRadioButton({
   value : 'Orange',
   visible : true,
   items : [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     }
   ]
 });
@@ -77,13 +77,13 @@ var mobileRadioButton = new Kuc.MobileRadioButton({
   label: 'Fruit',
   requriedIcon: false,
   items: [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     }
   ],
   value : 'Orange',

@@ -13,17 +13,17 @@ var component = new Kuc.MultiChoice({
   value : ['Orange', 'Grape'],
   visible : true,
   items : [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     },
-    { 
+    {
       label: 'grape',
-      value: 'Grape' 
+      value: 'Grape'
     }
   ]
 });
@@ -80,17 +80,17 @@ var multiChoice = new Kuc.MultiChoice({
   label: 'Fruit',
   requriedIcon: false,
   items: [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     },
-    { 
+    {
       label: 'grape',
-      value: 'Grape' 
+      value: 'Grape'
     }
   ],
   value : ['Orange', 'Grape'],
