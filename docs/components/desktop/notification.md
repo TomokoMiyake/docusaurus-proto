@@ -4,7 +4,7 @@ title: Notification
 sidebar_label: Notification
 ---
 
-# Overview
+## Overview
 
 Notification は、ポップアップの通知を表示します。
 
@@ -16,9 +16,9 @@ var component = new Kuc.Notification({
 
 ---
 
-# Specification
+## Specification
 
-## Property
+### Property
 
 使用できるプロパティの一覧です。プロパティを指定して値を更新することができます。
 
@@ -28,40 +28,40 @@ var component = new Kuc.Notification({
 | text | string | "" | 表示するテキスト ||
 | type | string | "danger" | 背景色 | 以下を指定できる<br>"danger" : Red(#e74c3c)<br>"info" : Blue(#3498db)<br>"success" : Green(#91c36c) |
 
-## Constructor
+### Constructor
 
 Notification(options)  
 使用できるコンストラクタの一覧です。
 
-### Parameter
+#### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
+| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は任意 |
 
-## Method
+### Method
 
 使用できるメソッドの一覧です。
 
-### open()
+#### open()
 Notification を表示する
 
-#### Parameter
+##### Parameter
 none
 
-#### Return
+##### Return
 none
 
-### close()
+#### close()
 Notification を非表示にする
 
-#### Parameter
+##### Parameter
 none
 
-#### Return
+##### Return
 none
 
 ---
-# Sample Code
+## Sample Code
 
 全てのパラメータを指定した場合のサンプルコードです。
 

@@ -4,7 +4,7 @@ title: ReadOnlyTable
 sidebar_label: ReadOnlyTable
 ---
 
-# Overview
+## Overview
 
 ReadOnlyTable は、kintone 詳細画面の読み取りテーブルを表示します。
 
@@ -34,9 +34,9 @@ var component = new Kuc.ReadOnlyTable({
 
 ---
 
-# Specification
+## Specification
 
-## Property
+### Property
 
 使用できるプロパティの一覧です。プロパティを指定して値を更新することができます。
 
@@ -46,24 +46,24 @@ var component = new Kuc.ReadOnlyTable({
 | id | string | "" | コンポーネントの id 名 ||
 | label | string | "" | コンポーネントの説明ラベル | 未指定、あるいは空文字の場合、label は表示されない |
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
-| columns | Array\<Columns\> | [] | テーブルの Header に表示するデータの配列 | Columns が配列以外の場合、エラーを出力する |
+| columns | Array\<Columns\> | [] | テーブルヘッダーに表示するデータの配列 | Columns が配列以外の場合、エラーを出力する |
 | columns.header | object | null | テーブルヘッダーのオブジェクト ||
 | columns.header.text | string | null | テーブルヘッダーに表示する文字列 ||
 | columns.visible | boolean | null | 列ごとの表示/非表示設定 ||
-| data | Array\<Array\<string\>\> | [] | テーブルの Body に表示するデータの二次元配列 | data, data 内の値が配列以外の場合、エラーを出力する |
+| data | Array\<Array\<string\>\> | [] | テーブルボディに表示するデータの二次元配列 | data, data 内の値が配列以外の場合、エラーを出力する |
 
-## Constructor
+### Constructor
 
 ReadOnlyTable(options)<br>
 使用できるコンストラクタの一覧です。
 
-### Parameter
+#### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
+| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は任意 |
 
 ---
-# Sample Code
+## Sample Code
 
 全てのパラメータを指定した場合のサンプルコードです。
 

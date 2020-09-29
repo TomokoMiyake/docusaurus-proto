@@ -5,7 +5,7 @@ sidebar_label: Button
 original_id: button
 ---
 
-# Overview
+## Overview
 
 Button は、ボタンを表示します。
 
@@ -19,9 +19,9 @@ var component = new Kuc.Button({
 
 ---
 
-# Specification
+## Specification
 
-## Property
+### Property
 
 使用できるプロパティの一覧です。プロパティを指定して値を更新することができます。
 
@@ -34,28 +34,28 @@ var component = new Kuc.Button({
 | disabled | boolean | false | コンポーネントの編集可/不可設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
 
-## Event
+### Event
 
 指定できるイベントの一覧です。
 
 | Name | Type | Description | Remark |
 | :--- | :--- | :--- | :--- |
-| click | function | フォーカスされた時のイベントハンドラ | 引数には Event の event オブジェクトをとる |
+| click | function | クリックされた時のイベントハンドラ | 引数には Event の event オブジェクトをとる |
 
-## Constructor
+### Constructor
 
 Button(options)  
 使用できるコンストラクタの一覧です。
 
-### Parameter
+#### Parameter
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
+| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は任意 |
 
 ---
 
-# Sample Code
+## Sample Code
 
 全てのパラメータを指定した場合のサンプルコードです。
 

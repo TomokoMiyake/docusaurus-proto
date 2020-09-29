@@ -5,22 +5,22 @@ sidebar_label: MobileRadioButton
 original_id: mobile-radio-button
 ---
 
-# Overview
+## Overview
 
-MobileRadioButton は複数選択肢の中から一つの値を選択することができます。。
+MobileRadioButton は、複数選択肢の中から一つの値を選択することができます。
 
 ```KUCComponentRenderer {"id":"_render"}
 var component = new Kuc.MobileRadioButton({
   value : 'Orange',
   visible : true,
   items : [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     }
   ]
 });
@@ -28,9 +28,9 @@ var component = new Kuc.MobileRadioButton({
 
 ---
 
-# Specification
+## Specification
 
-## Property
+### Property
 
 使用できるプロパティの一覧です。プロパティを指定して値を更新することができます。
 
@@ -45,30 +45,30 @@ var component = new Kuc.MobileRadioButton({
 | disabled | boolean | false | コンポーネントの編集可/不可設定 ||
 | requiredIcon | boolean | false | コンポーネントの必須アイコン表示/非表示設定 ||
 | visible | boolean | true | コンポーネントの表示/非表示設定 ||
-| items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列ではない場合、エラーを出力する |
+| items | Array\<Item\> | [] | 表示する選択肢一覧 | items が配列以外の場合、エラーを出力する |
 | Item.label | string | null | 各選択肢のテキスト | Item.label が未指定の場合、UI 上は Item.value の値が表示される |
 | Item.value | string | null | 各選択肢の値 | Item.value の値が重複した場合、エラーを出力する |
 
-## Event
+### Event
 指定できるイベントの一覧です。
 
 | Name | Type | Description | Remark |
 | :--- | :--- | :--- | :--- |
-| change | function | 値が変更された時のイベントハンドラ | 引数には Event の event オブジェクトをとる<br><br>event.detail で以下の値を受け取ることができる<br>event.detail.oldValue : 変更前のvalueの値<br>event.detail.value : 変更後のvalueの値 |
+| change | function | 値が変更された時のイベントハンドラ | 引数には Event の event オブジェクトをとる<br><br>event.detail で以下の値を受け取ることができる<br>event.detail.oldValue : 変更前の value の値<br>event.detail.value : 変更後の value の値 |
 
-## Constructor
+### Constructor
 
 RadioButton(options)  
 使用できるコンストラクタの一覧です。
 
-### Parameter
+#### Parameter
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
+| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は任意 |
 
 ---
-# Sample Code
+## Sample Code
 
 全てのパラメータを指定した場合のサンプルコードです。
 
@@ -76,15 +76,15 @@ RadioButton(options)
 var space = kintone.app.record.getSpaceElement('space');
 var mobileRadioButton = new Kuc.MobileRadioButton({
   label: 'Fruit',
-  requriedIcon: false,
+  requiredIcon: true,
   items: [
-    { 
+    {
       label: 'orange',
-      value: 'Orange' 
+      value: 'Orange'
     },
-    { 
+    {
       label: 'apple',
-      value: 'Apple' 
+      value: 'Apple'
     }
   ],
   value : 'Orange',

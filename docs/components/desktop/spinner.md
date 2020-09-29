@@ -4,7 +4,7 @@ title: Spinner
 sidebar_label: Spinner
 ---
 
-# Overview
+## Overview
 
 Spinner は、ローディングスピナーを表示します。
 
@@ -15,52 +15,52 @@ var component = new Spinner({
 
 ---
 
-# Specification
+## Specification
 
-## Property
+### Property
 
 使用できるプロパティの一覧です。プロパティを指定して値を更新することができます。
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| text | string | "" | ローダーアイコン下部に表示するテキスト | text が未指定もしくは空文字の場合*は、初期値を表示する |
+| text | string | "" | ローダーアイコン下部に表示するテキスト | text が未指定、あるいは空文字の場合*は、初期値を表示する |
 
-\* textが未指定もしくは空文字の場合は、アクセシビリティを考慮して、visually-hidden classを  
-付与し、"now loading…" の文言を視覚的に見えない状態で表示します
+\* text が未指定、あるいは空文字の場合は、アクセシビリティを考慮して visually-hidden class を  
+付与し、"now loading…" の文言を視覚的に見えない状態で表示する
 
-## Constructor
+### Constructor
 
 Spinner(options)  
 使用できるコンストラクタの一覧です。
 
-### Parameter
+#### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は必須でない |
+| options | object | {} | コンポーネントのプロパティを含む JSON オブジェクト | options 内の値は任意 |
 
-## Method
+### Method
 使用できるメソッドの一覧です。
 
-### open()
+#### open()
 コンポーネントを表示する
 
-#### Parameter
+##### Parameter
 none
 
-#### Return
+##### Return
 none
 
-### close()
+#### close()
 コンポーネントを非表示にする
 
-#### Parameter
+##### Parameter
 none
 
-#### Return
+##### Return
 none
 
 ---
-# Sample Code
+## Sample Code
 
 全てのパラメータを指定した場合のサンプルコードです。
 
